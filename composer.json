@@ -1,0 +1,31 @@
+{
+  "name": "sharapov/zend-filter",
+  "description": "A batch of additional filters for zend framework (https://framework.zend.com)",
+  "license": "GPL-3.0",
+  "type": "library",
+  "keywords": [
+    "zend",
+    "zend-filter"
+  ],
+  "homepage": "https://github.com/sharapovweb/zend-filter",
+  "authors": [
+    {
+      "name": "Alexander Sharapov",
+      "email": "alexander@sharapov.biz",
+      "homepage": "http://sharapov.biz",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "zendframework/zend-i18n": "2.7.3"
+  },
+  "suggest": {
+    "zendframework/zendframework": "Zend Framework"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sharapov\\ZendFilter\\": "src/zend-filter/"
+    }
+  }
+}
