@@ -83,7 +83,7 @@ class AlnumDash extends \Zend\I18n\Filter\Alnum
 
     $whiteSpace = $this->options['allow_white_space'] ? '\s' : '';
     $dashes = $this->options['allow_dashes'] ? '-' : '';
-    $underscores = $this->options['allow_underscores'] ? '-' : '';
+    $underscores = $this->options['allow_underscores'] ? '_' : '';
     $language   = Locale::getPrimaryLanguage($this->getLocale());
 
     if (!static::hasPcreUnicodeSupport()) {
