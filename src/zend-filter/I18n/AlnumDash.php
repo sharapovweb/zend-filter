@@ -27,11 +27,13 @@ class AlnumDash extends \Zend\I18n\Filter\Alnum
    * Sets the allow_dashes option
    *
    * @param  bool $flag
+   *
    * @return AlnumDash Provides a fluent interface
    */
   public function setAllowDashes($flag = true)
   {
-    $this->options['allow_dashes'] = (bool) $flag;
+    $this->options['allow_dashes'] = (bool)$flag;
+
     return $this;
   }
 
@@ -49,11 +51,13 @@ class AlnumDash extends \Zend\I18n\Filter\Alnum
    * Sets the allow_underscores option
    *
    * @param  bool $flag
+   *
    * @return AlnumDash Provides a fluent interface
    */
   public function setAllowUnderscores($flag = true)
   {
-    $this->options['allow_underscores'] = (bool) $flag;
+    $this->options['allow_underscores'] = (bool)$flag;
+
     return $this;
   }
 
@@ -73,6 +77,7 @@ class AlnumDash extends \Zend\I18n\Filter\Alnum
    * Returns $value as string with all non-alphanumeric, dash and underscore characters removed
    *
    * @param  string|array $value
+   *
    * @return string|array
    */
   public function filter($value)
@@ -84,14 +89,14 @@ class AlnumDash extends \Zend\I18n\Filter\Alnum
     $whiteSpace = $this->options['allow_white_space'] ? '\s' : '';
     $dashes = $this->options['allow_dashes'] ? '-' : '';
     $underscores = $this->options['allow_underscores'] ? '_' : '';
-    $language   = Locale::getPrimaryLanguage($this->getLocale());
+    $language = Locale::getPrimaryLanguage($this->getLocale());
 
     if (!static::hasPcreUnicodeSupport()) {
       // POSIX named classes are not supported, use alternative a-zA-Z0-9 match
       $pattern = '/[^a-zA-Z0-9' . $whiteSpace . $dashes . $underscores . ']/';
-    } elseif ($language == 'ja'|| $language == 'ko' || $language == 'zh') {
+    } elseif ($language == 'ja' || $language == 'ko' || $language == 'zh') {
       // Use english alphabet
-      $pattern = '/[^a-zA-Z0-9'  . $whiteSpace . $dashes . $underscores . ']/u';
+      $pattern = '/[^a-zA-Z0-9' . $whiteSpace . $dashes . $underscores . ']/u';
     } else {
       // Use native language alphabet
       $pattern = '/[^\p{L}\p{N}' . $whiteSpace . $dashes . $underscores . ']/u';
