@@ -33,6 +33,6 @@ Links
 
 [Composer](https://getcomposer.org/)
 
-[GitHub](https://github.com/sharapovweb/zend-filter)
+[GitHub](https://github.com/sharapov-outsource/zend-filter)
 
 [Packagist](https://packagist.org/packages/sharapov/zend-filter)
