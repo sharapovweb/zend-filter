@@ -1,5 +1,9 @@
 # zend-filter
+
 A batch of additional filters for zend framework (https://framework.zend.com)
+
+# Attention!
+The project is deprecated and not supported anymore. Use https://github.com/sharapov-outsource/zend-extensions instead.
 
 Installation (via Composer):
 ============================
